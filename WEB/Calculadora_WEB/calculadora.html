@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Calculadora</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <label for="P1">Digite um número</label>
+  <input id="P1" type="text">
+  <label for="P2">Digite outro número</label>
+  <input id="P2" type="text">
+  <div class="operador">
+    <div class="in">
+      <p>+</p>
+      <input id="mais" type="radio" name="1">
+    </div>
+    <div class="in">
+      <p>-</p>
+      <input id="menos" type="radio" name="1">
+    </div>
+    <div class="in">
+      <p>*</p>
+      <input id="mult" type="radio" name="1">
+    </div>
+    <div class="in">
+      <p>/</p>
+      <input id="divid" type="radio" name="1">
+    </div>
+    <div class="in">
+      <p>%</p>
+      <input id="per100" type="radio" name="1">
+    </div>
+  </div>
+  
+  <button onclick="math( )">Enviar</button>
+  <p id="text"></p>
+  <script src="script.js"></script>
+</body>
+
+</html>

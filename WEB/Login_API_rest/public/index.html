@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <nav class="menu">
+        <ul class="list-menu">
+            <li><a href="#">Home</a></li>
+            <li><a id="log" href="#" class="a">Login</a></li>
+            <li><a id="cad" href="#">Cadastro</a></li>
+            <li><a href="#">Informações</a></li>
+        </ul>
+    </nav>
+        <div class="back-ground" id="fundo-cadastro">
+            <form class="form" id="form">
+                <h1 class="Cadastro">Cadastro</h1>
+                <div class="form-name" id="nome">
+                    <h2 class="text">Nome</h2>
+                    <input type="text" class="input-name" id="input-name" required>
+                </div>
+                <div class="form-email" id="email">
+                    <h2 class="text">Email</h2>
+                    <input type="email" class="input-email" id="input-email" required>
+                </div>
+                <div class="form-senha" id="senha">
+                    <h2 class="text">Senha</h2>
+                    <input type="password" class="input-senha" id="input-senha" required>
+                </div>
+                <div class="form-dataNascimento" id="dataNascimento">
+                    <h2 class="text">Data de nascimento</h2>
+                    <input type="date" class="input-date" id="input-date" required>
+                </div>
+                <button type="submit" class="submit" id="submit"><h5 class="botao">Enviar</h5></button>
+            </form>
+        </div>
+        <div class="back-ground ativada" id="fundo-do-login">
+            <form class="form-login" id="form-login">
+                <h1 class="Cadastro">Login</h1>
+                <div class="form-email" id="email">
+                    <h2 class="text">Email</h2>
+                    <input type="email" class="input-email" id="login-email" required>
+                </div>
+                <div class="form-senha" id="senha">
+                    <h2 class="text">Senha</h2>
+                    <input type="password" class="input-senha" id="login-senha" required>
+                </div>
+                <button type="submit" class="submit" id="submit-login"><h5 class="botao">Enviar</h5></button>
+            </form>
+        </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
