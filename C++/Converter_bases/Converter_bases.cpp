@@ -5,46 +5,47 @@ using namespace std;
 
 int h_toDec(string hex){
     int resul = 0;
-    int len = 0;
     char element = ' ';
+    int value = 0;
     try{
-        while(hex[len] != '\0' && hex[len] != '\n'){
+        for(int len = hex.length()-1; len >= 0 ; len--){
             if(!('a' <= hex[len] && hex[len] <= 'f') && !('A' <= hex[len] && hex[len] <= 'F') && !('0' <= hex[len] && hex[len] <= '9')){
                 throw runtime_error("Conversao de hexadecimal, so entre (-9,9) e entre (a,f) ou (A,F)");
             }else{
                 element = hex[len];
                 if('0' <= element && element <= '9'){
-                    resul += (element - '0')*pow(16,len);
+                    value = (element - '0');
                 }else{
                     switch(element){
                     case 'a':
                     case 'A':
-                        resul += (10)*pow(16,len);
+                        value = 10;
                         break;
                     case 'b':
                     case 'B':
-                        resul += (11)*pow(16,len);
+                        value = 11;
                         break;
                     case 'c':
                     case 'C':
-                        resul += (12)*pow(16,len);
+                        value = 12;
                         break;
                     case 'd':
                     case 'D':
-                        resul += (13)*pow(16,len);
+                        value = 13;
                         break;
                     case 'e':
                     case 'E':
-                        resul += (14)*pow(16,len);
+                        value = 14;
                         break;
                     case 'f':
                     case 'F':
-                        resul += (15)*pow(16,len);
+                        value = 15;
                         break;
                     }
+
                 }
+                resul += (value)*pow(16,hex.length()-1-len);
             }
-            len++;
         }
             return resul;
     }
