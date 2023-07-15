@@ -83,17 +83,17 @@ class Jogo:
         index = 0
         tamanho = len(self.dados)
         for i in range(len(self.dados)):
-            for j in range(len(self.dados[i])-1):
+            for j in range(tamanho-1):
                 if self.dados[i][j] == self.dados[i][j+1] and not(self.dados[i][j] == '_') and self.dados[i][-1] != '_':
                     countx += 1
                     index = self.dados[i][0]
-                elif self.dados[j][i] == self.dados[j+1][i] and not(self.dados[j][i] == '_') and self.dados[-1][i] != '_':
+                if self.dados[j][i] == self.dados[j+1][i] and not(self.dados[j+1][i] == '_') and self.dados[-1][i] != '_':
                     county += 1
                     index = self.dados[j][0]
-                elif self.dados[j][j] == self.dados[j+1][j+1] and not(self.dados[j][i] == '_') and self.dados[-1][-1] != '_':
+                if self.dados[j][j] == self.dados[j+1][j+1] and not(self.dados[j][i] == '_') and self.dados[-1][-1] != '_':
                     countdx += 1
                     index = self.dados[0][0]
-                elif self.dados[tamanho-1-j][j] == self.dados[tamanho-j-2][j+1] and not(self.dados[tamanho-1-j][j] == '_') and self.dados[-1][0] != '_':
+                if self.dados[tamanho-1-j][j] == self.dados[tamanho-j-2][j-1] and not(self.dados[tamanho-1-j][j] == '_') and self.dados[-1][0] != '_':
                     countdy+=1
                     index = self.dados[-1][0]
             if countx == 2 or county == 2 or countdx == 2 or countdy == 2:
