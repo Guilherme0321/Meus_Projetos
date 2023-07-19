@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="432.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.Interface_Controller">
+   <children>
+      <FlowPane alignment="CENTER" layoutX="67.0" layoutY="102.0" orientation="VERTICAL" prefHeight="358.0" prefWidth="299.0">
+         <children>
+            <Label layoutX="63.0" layoutY="53.0" prefWidth="250.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Nome de usuário:" textFill="WHITE" />
+            <TextField fx:id="userName" layoutX="63.0" layoutY="79.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #333; -fx-font-weight: bold; -fx-text-fill: white;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <Label prefWidth="250.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Nome:" textFill="WHITE">
+               <FlowPane.margin>
+                  <Insets top="15.0" />
+               </FlowPane.margin></Label>
+            <TextField fx:id="name" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #333; -fx-font-weight: bold; -fx-text-fill: white;">
+               <FlowPane.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </FlowPane.margin>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></TextField>
+            <Label prefWidth="250.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Email:" textFill="WHITE">
+               <FlowPane.margin>
+                  <Insets top="15.0" />
+               </FlowPane.margin></Label>
+            <TextField fx:id="email" layoutX="36.0" layoutY="77.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #333; -fx-font-weight: bold; -fx-text-fill: white;">
+               <FlowPane.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </FlowPane.margin>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <Label prefWidth="252.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Senha:" textFill="WHITE">
+               <FlowPane.margin>
+                  <Insets top="15.0" />
+               </FlowPane.margin></Label>
+            <PasswordField fx:id="senha" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #333; -fx-font-weight: bold; -fx-text-fill: white;">
+               <FlowPane.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </FlowPane.margin>
+            </PasswordField>
+         </children>
+      </FlowPane>
+      <Label alignment="CENTER" layoutX="133.0" layoutY="14.0" prefHeight="49.0" prefWidth="167.0" text="Cadastro" textAlignment="CENTER" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="18.0" layoutY="481.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="21.0" prefWidth="398.0">
+         <children>
+            <Button fx:id="cancelar" mnemonicParsing="false" onAction="#cancelar" prefHeight="40.0" prefWidth="93.0" style="-fx-background-radius: 10;" text="Cancelar">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="validar" mnemonicParsing="false" onAction="#vallidation" prefHeight="40.0" prefWidth="93.0" style="-fx-background-radius: 10;" text="Enviar">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" layoutX="17.0" layoutY="460.0" prefHeight="21.0" prefWidth="400.0">
+         <children>
+            <Label fx:id="alert" contentDisplay="CENTER" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>
