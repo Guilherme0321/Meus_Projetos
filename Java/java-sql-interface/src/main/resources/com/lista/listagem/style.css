@@ -1,0 +1,20 @@
+.element{
+    -fx-background-color: #333;
+        -fx-text-fill: blue;
+}
+
+
+.element:hover{
+    -fx-background-color: blue;
+    -fx-text-fill: WHITE;
+    /*-fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;*/
+}
+.input{
+    -fx-background-radius: 0px 10px 10px 0px;
+}
+.input:hover{
+     -fx-border-radius: 0px 0px 10px 0px;
+     -fx-border-width: 0px 0px 3px 0px;
+     -fx-border-color: blue;
+}
