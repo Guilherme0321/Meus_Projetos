@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="762.0" prefWidth="1128.0" style="-fx-background-color: #333;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lista.listagem.Controller">
+   <children>
+      <GridPane layoutY="89.0" prefHeight="659.0" prefWidth="1128.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="215.0" minHeight="0.0" prefHeight="51.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="628.0" minHeight="10.0" prefHeight="612.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="1128.0" style="-fx-background-color: #333;">
+               <children>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="146.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="46.0" style="-fx-background-color: #1700c2; -fx-background-radius: 10  0 0 10;" stylesheets="@style.css">
+                           <children>
+                              <ImageView fitHeight="51.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/person-add.png" />
+                                 </image>
+                              </ImageView>
+                           </children></VBox>
+                        <Button fx:id="active" mnemonicParsing="false" onAction="#chamar" prefHeight="42.0" prefWidth="100.0" styleClass="botao" stylesheets="@style.css" text="Adicionar" textFill="#0037ff">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <FlowPane.margin>
+                              <Insets />
+                           </FlowPane.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </FlowPane>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="588.0" prefWidth="1088.0" style="-fx-border-radius: 30; -fx-border-width: 5; -fx-background-color: black; -fx-background-radius: 35; -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, rgba(0,66,204,1) 0%, rgba(0,255,214,1) 100%);" GridPane.rowIndex="1">
+               <children>
+                  <TableView maxWidth="-Infinity" prefHeight="556.0" prefWidth="1050.0" style="-fx-background-radius: 30; -fx-border-radius: 30 30 30 30; -fx-background-color: #000614;" stylesheets="@style.css">
+                    <columns>
+                      <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" style="-fx-background-color: #000430; -fx-background-radius: 0 0 0 0;">
+                           <graphic>
+                              <Label text="ID">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.30000001192092896" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.6010585772405892">
+                                             <color>
+                                                <Color green="0.518345296382904" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.988979736935656">
+                                             <color>
+                                                <Color green="0.949999988079071" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color green="0.949999988079071" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill></Label>
+                           </graphic></TableColumn>
+                      <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" style="-fx-background-color: #000430;">
+                           <graphic>
+                              <Label text="PRIMEIRO NOME">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.30000001192092896" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.6010585772405892">
+                                             <color>
+                                                <Color green="0.518345296382904" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.988979736935656">
+                                             <color>
+                                                <Color green="0.949999988079071" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color green="0.949999988079071" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                           </graphic></TableColumn>
+                        <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" style="-fx-background-color: #000430;">
+                           <graphic>
+                              <Label text="ÚLTIMO NOME">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.30000001192092896" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.6010585772405892">
+                                             <color>
+                                                <Color green="0.518345296382904" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.988979736935656">
+                                             <color>
+                                                <Color green="0.949999988079071" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color green="0.949999988079071" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                           </graphic></TableColumn>
+                        <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="250.0" style="-fx-background-color: #000430;">
+                           <graphic>
+                              <Label text="EMAIL">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.30000001192092896" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.6010585772405892">
+                                             <color>
+                                                <Color green="0.518345296382904" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.988979736935656">
+                                             <color>
+                                                <Color green="0.949999988079071" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color green="0.949999988079071" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                           </graphic></TableColumn>
+                        <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" style="-fx-background-color: #000430; -fx-background-radius: 0 0 0 0; -fx-border-radius: 0 10 0 0;">
+                           <graphic>
+                              <Label text="SENHA">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.30000001192092896" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.6010585772405892">
+                                             <color>
+                                                <Color green="0.518345296382904" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="0.988979736935656">
+                                             <color>
+                                                <Color green="0.949999988079071" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color green="0.949999988079071" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                           </graphic></TableColumn>
+                    </columns>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" />
+               </GridPane.margin>
+            </VBox>
+         </children>
+      </GridPane>
+      <AnchorPane fx:id="add" disable="true" layoutY="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="770.0" prefWidth="446.0" style="-fx-background-color: black;" visible="false" AnchorPane.rightAnchor="1130.0">
+         <children>
+            <ImageView fitHeight="185.0" fitWidth="184.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/user-group.png" />
+               </image>
+            </ImageView>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="81.0" layoutY="217.0" orientation="VERTICAL" prefWidth="200.0">
+               <children>
+                  <FlowPane id="validados" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/person.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Primeiro nome" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <FlowPane.margin>
+                              <Insets />
+                           </FlowPane.margin>
+                        </TextField>
+                     </children>
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </FlowPane>
+                  <FlowPane id="validados" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
+                           <children>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/user.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Último nome" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <FlowPane.margin>
+                        <Insets top="35.0" />
+                     </FlowPane.margin>
+                  </FlowPane>
+                  <FlowPane id="validados" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/email.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Email" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <FlowPane.margin>
+                        <Insets bottom="35.0" top="35.0" />
+                     </FlowPane.margin>
+                  </FlowPane>
+                  <FlowPane id="validados" layoutX="10.0" layoutY="259.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/lock.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Senha" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </FlowPane>
+               </children>
+            </FlowPane>
+            <Button fx:id="sendRegister" contentDisplay="CENTER" layoutX="151.0" layoutY="643.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="145.0" style="-fx-background-radius: 10;" styleClass="element" stylesheets="@style.css" text="Cadastrar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

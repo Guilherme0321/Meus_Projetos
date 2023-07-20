@@ -1,6 +1,6 @@
 .element{
     -fx-background-color: #333;
-        -fx-text-fill: blue;
+    -fx-text-fill: blue;
 }
 
 
@@ -13,8 +13,17 @@
 .input{
     -fx-background-radius: 0px 10px 10px 0px;
 }
-.input:hover{
-     -fx-border-radius: 0px 0px 10px 0px;
-     -fx-border-width: 0px 0px 3px 0px;
-     -fx-border-color: blue;
+.input:hover, .input:focused {
+    -fx-border-radius: 0px 0px 10px 0px;
+    -fx-border-width: 0px 0px 3px 0px;
+    -fx-border-color: blue;
+}
+.botao{
+    -fx-background-radius:  0px 10px 10px 0px;
+    -fx-background-color: black;
+    -fx-text-fill: #0037ff;
+}
+.botao:hover{
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgba(17,00,194,1) 0%, rgba(0,255,214,1) 100%);
+    -fx-text-fill: black;
 }

@@ -1,6 +1,7 @@
 package com.lista.listagem;
 
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
@@ -15,7 +16,7 @@ public class Controller {
     @FXML
     private AnchorPane add;
 
-    public void chamar() {
+    public void chamar(ActionEvent actionEvent) {
 
         if (buttonActive) {
             TranslateTransition slide = new TranslateTransition();
@@ -25,10 +26,17 @@ public class Controller {
             slide.setToX(0);
             slide.play();
 
-            add.setTranslateX(446);
             buttonActive = false;
-            System.out.println(buttonActive);
+            add.setTranslateX(446);
+            slide.setOnFinished((event)->{
+                add.setVisible(false);
+                add.setDisable(true);
+            });
+            active.setText("Adicionar");
+
         } else {
+            add.setVisible(true);
+            add.setDisable(false);
             TranslateTransition slide = new TranslateTransition();
             slide.setDuration(Duration.seconds(0.2));
             slide.setNode(add);
@@ -37,7 +45,9 @@ public class Controller {
             slide.play();
             buttonActive = true;
             add.setTranslateX(0);
-            System.out.println(buttonActive);
+
+
+            active.setText("Fechar");
         }
     }
 }
