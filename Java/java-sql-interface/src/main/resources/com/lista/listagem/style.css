@@ -12,18 +12,62 @@
 }
 .input{
     -fx-background-radius: 0px 10px 10px 0px;
+    -fx-border-width: 0px 0px 3px 0px;
 }
 .input:hover, .input:focused {
     -fx-border-radius: 0px 0px 10px 0px;
     -fx-border-width: 0px 0px 3px 0px;
-    -fx-border-color: blue;
+    -fx-border-color: linear-gradient(from 0% 100% to 100% 0%, rgba(0,255,214,1) 0%, rgba(17,00,194,1) 100%);
 }
 .botao{
     -fx-background-radius:  0px 10px 10px 0px;
-    -fx-background-color: black;
+    -fx-background-color: #000c36;
     -fx-text-fill: #0037ff;
+    -fx-border-width: 0px;
 }
 .botao:hover{
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgba(17,00,194,1) 0%, rgba(0,255,214,1) 100%);
+    -fx-background-color: linear-gradient(from 0% 100% to 100% 0%, rgba(0,255,214,1) 0%, rgba(17,00,194,1) 100%);
     -fx-text-fill: black;
+    -fx-border-width: 0px;
+}
+.table{
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-background-color:  #000614;
+}
+
+.table .id{
+    -fx-background-color: black;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-border-width: 0 0 1px 0;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.table .id:even{
+    -fx-background-color:  #000419;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: transparent;
+}
+.table .id:odd{
+    -fx-background-color:  #000420;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: transparent;
+}
+.table .id:even:hover{
+    -fx-background-color:  #000430;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: rgba(17,00,194,1);
+
+}
+.table .id:odd:hover{
+    -fx-background-color:  #000430;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: rgba(17,00,194,1);
+}
+.icon{
+    -fx-background-radius:  10px 0px 0px 10px;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgba(17,00,194,1) 0%, rgba(0,255,214,1) 100%);
+    -fx-border-width: 0px;
 }

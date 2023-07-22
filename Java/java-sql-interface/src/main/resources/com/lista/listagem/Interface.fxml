@@ -7,52 +7,22 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="762.0" prefWidth="1128.0" style="-fx-background-color: #333;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lista.listagem.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="1128.0" style="-fx-background-color: #001;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lista.listagem.Controller">
    <children>
-      <GridPane layoutY="89.0" prefHeight="659.0" prefWidth="1128.0">
+      <GridPane layoutY="93.0" prefHeight="700.0" prefWidth="1128.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="215.0" minHeight="0.0" prefHeight="51.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="628.0" minHeight="10.0" prefHeight="612.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="215.0" minHeight="0.0" prefHeight="113.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="628.0" minHeight="10.0" prefHeight="618.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="1128.0" style="-fx-background-color: #333;">
+            <VBox alignment="CENTER" prefHeight="590.0" prefWidth="1088.0" style="-fx-border-radius: 30; -fx-border-width: 5; -fx-background-color: black; -fx-background-radius: 35; -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, rgba(0,66,204,1) 0%, rgba(0,255,214,1) 100%);" GridPane.rowIndex="1">
                <children>
-                  <FlowPane alignment="CENTER" columnHalignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="146.0">
-                     <children>
-                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="46.0" style="-fx-background-color: #1700c2; -fx-background-radius: 10  0 0 10;" stylesheets="@style.css">
-                           <children>
-                              <ImageView fitHeight="51.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Image/person-add.png" />
-                                 </image>
-                              </ImageView>
-                           </children></VBox>
-                        <Button fx:id="active" mnemonicParsing="false" onAction="#chamar" prefHeight="42.0" prefWidth="100.0" styleClass="botao" stylesheets="@style.css" text="Adicionar" textFill="#0037ff">
-                           <font>
-                              <Font name="System Bold" size="15.0" />
-                           </font>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </Button>
-                     </children>
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
-                  </FlowPane>
-               </children>
-               <GridPane.margin>
-                  <Insets bottom="5.0" />
-               </GridPane.margin>
-            </HBox>
-            <VBox alignment="CENTER" prefHeight="588.0" prefWidth="1088.0" style="-fx-border-radius: 30; -fx-border-width: 5; -fx-background-color: black; -fx-background-radius: 35; -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, rgba(0,66,204,1) 0%, rgba(0,255,214,1) 100%);" GridPane.rowIndex="1">
-               <children>
-                  <TableView maxWidth="-Infinity" prefHeight="556.0" prefWidth="1050.0" style="-fx-background-radius: 30; -fx-border-radius: 30 30 30 30; -fx-background-color: #000614;" stylesheets="@style.css">
+                  <TableView fx:id="tabela" maxWidth="-Infinity" prefHeight="563.0" prefWidth="1052.0" styleClass="table">
                     <columns>
-                      <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" style="-fx-background-color: #000430; -fx-background-radius: 0 0 0 0;">
+                      <TableColumn fx:id="Tid" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="130.0" styleClass="id">
                            <graphic>
                               <Label text="ID">
                                  <font>
@@ -85,7 +55,7 @@
                                     </LinearGradient>
                                  </textFill></Label>
                            </graphic></TableColumn>
-                      <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" style="-fx-background-color: #000430;">
+                      <TableColumn fx:id="Tnome" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" styleClass="id">
                            <graphic>
                               <Label text="PRIMEIRO NOME">
                                  <font>
@@ -119,7 +89,7 @@
                                  </textFill>
                               </Label>
                            </graphic></TableColumn>
-                        <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" style="-fx-background-color: #000430;">
+                        <TableColumn fx:id="Tlastname" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="200.0" styleClass="id">
                            <graphic>
                               <Label text="ÚLTIMO NOME">
                                  <font>
@@ -153,7 +123,7 @@
                                  </textFill>
                               </Label>
                            </graphic></TableColumn>
-                        <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="250.0" style="-fx-background-color: #000430;">
+                        <TableColumn fx:id="Temail" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="280.0" styleClass="id">
                            <graphic>
                               <Label text="EMAIL">
                                  <font>
@@ -187,7 +157,7 @@
                                  </textFill>
                               </Label>
                            </graphic></TableColumn>
-                        <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" style="-fx-background-color: #000430; -fx-background-radius: 0 0 0 0; -fx-border-radius: 0 10 0 0;">
+                        <TableColumn fx:id="Tsenha" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="241.0" styleClass="id">
                            <graphic>
                               <Label text="SENHA">
                                  <font>
@@ -231,9 +201,117 @@
                   <Insets bottom="10.0" left="20.0" right="20.0" />
                </GridPane.margin>
             </VBox>
+            <VBox alignment="CENTER" prefHeight="75.0" prefWidth="1124.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="1072.0" style="-fx-border-color: linear-gradient(from 0% 0% to 100% 0%, rgba(17,00,194,1) 0%, rgba(0,255,214,1) 100%); -fx-border-width: 0 0 1 0;" text="Alterar" textAlignment="CENTER" textFill="#001eff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="1128.0">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="icon">
+                                 <children>
+                                    <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Image/person-circle.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="AfirstName" prefHeight="40.0" promptText="PRIMEIRO NOME" styleClass="input" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="icon">
+                                 <children>
+                                    <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Image/person-circle.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="AlastName" prefHeight="40.0" promptText="ULTIMO NOME" styleClass="input" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="219.0" layoutY="10.0">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="icon">
+                                 <children>
+                                    <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Image/email..png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="Aemail" prefHeight="40.0" promptText="EMAIL" styleClass="input" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="428.0" layoutY="10.0">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="icon">
+                                 <children>
+                                    <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Image/lock..png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="Asenha" prefHeight="40.0" promptText="SENHA" styleClass="input" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="727.0" layoutY="10.0">
+                           <children>
+                              <Button mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="42.0" prefWidth="113.0" styleClass="botao" text="Enviar">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="42.0" prefWidth="40.0" styleClass="icon">
+                                 <children>
+                                    <ImageView fitHeight="31.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Image/send.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <FlowPane.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </FlowPane.margin>
+                        </HBox>
+                     </children>
+                  </FlowPane>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" />
+               </GridPane.margin>
+            </VBox>
          </children>
       </GridPane>
-      <AnchorPane fx:id="add" disable="true" layoutY="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="770.0" prefWidth="446.0" style="-fx-background-color: black;" visible="false" AnchorPane.rightAnchor="1130.0">
+      <AnchorPane fx:id="add" disable="true" layoutY="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="802.0" prefWidth="446.0" style="-fx-background-color: black;" visible="false" AnchorPane.rightAnchor="1130.0">
          <children>
             <ImageView fitHeight="185.0" fitWidth="184.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -338,5 +416,33 @@
             </Button>
          </children>
       </AnchorPane>
+      <HBox alignment="CENTER_RIGHT" layoutX="951.0" prefHeight="62.0" prefWidth="177.0">
+         <children>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="146.0">
+               <children>
+                  <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="46.0" styleClass="icon" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="51.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/person-add.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Button fx:id="active" mnemonicParsing="false" onAction="#chamar" prefHeight="42.0" prefWidth="100.0" styleClass="botao" stylesheets="@style.css" text="Adicionar" textFill="#000c36">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </FlowPane>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
