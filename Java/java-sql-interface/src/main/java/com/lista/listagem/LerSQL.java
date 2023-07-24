@@ -1,4 +1,6 @@
 package com.lista.listagem;
+
+
 import java.security.PrivateKey;
 import java.sql.*;
 import java.util.ArrayList;
@@ -69,5 +71,16 @@ public class LerSQL {
             System.out.println("Não conseguiu pegar a classe");
         }
         return usuarios;
+    }
+    public void deleteData(int id){
+        String sql = "DELETE FROM users WHERE id = ?";
+        try{
+            Connection connection = DriverManager.getConnection(url,username,senha);
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1,id);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Banco de dados não encontrado");
+        }
     }
 }

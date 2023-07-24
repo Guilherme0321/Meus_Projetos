@@ -8,13 +8,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import org.w3c.dom.Text;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -71,6 +69,12 @@ public class Controller implements Initializable {
     @FXML
     private TextField lastnome;
 
+    @FXML
+    private TextField deletar;
+
+    ArrayList<User> usuarios;
+
+    private int userLength;
     private int IDdeAlterar;
     private int Aid = 0;
 
@@ -139,10 +143,13 @@ public class Controller implements Initializable {
         Tsenha.setCellValueFactory(new PropertyValueFactory<User,String>("senha"));
         LerSQL getData = new LerSQL("jdbc:mysql://localhost:3306/dados","root","12345");
         ArrayList<User> data = getData.getData();
+        usuarios = data;
         addColumnList(data);
     }
     public void addColumnList(ArrayList<User> data){
         ObservableList<User> userslist = FXCollections.observableArrayList(data);
+        userLength = data.size();
+
         tabela.setItems(userslist);
     }
     @FXML
@@ -166,6 +173,48 @@ public class Controller implements Initializable {
             LerSQL update = new LerSQL("jdbc:mysql://localhost:3306/dados","root","12345");
             update.uptade(updatedUser);
             carregarTabela();
+        }
+    }
+    @FXML
+    protected void deleteData(){
+        String id = deletar.getText();
+        boolean isIn = false;
+        if(!id.isEmpty()) {
+            int ID = Integer.parseInt(id);
+            for(User x : usuarios){
+                if(ID == x.getId()){
+                    isIn = true;
+                    break;
+                }
+            }
+
+            if (isIn && ID > 0) {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Aviso!");
+                alert.setHeaderText(null);
+                alert.setContentText("Deseja excluir essa linha?");
+
+                ButtonType sim = new ButtonType("Sim"), nao = new ButtonType("Não");
+
+                alert.getButtonTypes().setAll(sim, nao);
+
+                alert.showAndWait().ifPresent(res -> {
+                    if (res == sim) {
+                        LerSQL delete = new LerSQL("jdbc:mysql://localhost:3306/dados", "root", "12345");
+                        delete.deleteData(ID);
+                        carregarTabela();
+                    } else {
+                        System.out.println("Ação cancelada!");
+                    }
+                });
+            } else {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Aviso!");
+                alert.setHeaderText(null);
+                alert.setContentText("ID inexistente!");
+
+                alert.showAndWait();
+            }
         }
     }
 

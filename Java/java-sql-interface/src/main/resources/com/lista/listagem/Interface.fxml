@@ -89,7 +89,7 @@
                                  </textFill>
                               </Label>
                            </graphic></TableColumn>
-                        <TableColumn fx:id="Tlastname" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="200.0" styleClass="id">
+                        <TableColumn fx:id="Tlastname" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="216.0" styleClass="id">
                            <graphic>
                               <Label text="ÚLTIMO NOME">
                                  <font>
@@ -123,7 +123,7 @@
                                  </textFill>
                               </Label>
                            </graphic></TableColumn>
-                        <TableColumn fx:id="Temail" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="280.0" styleClass="id">
+                        <TableColumn fx:id="Temail" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="264.0" styleClass="id">
                            <graphic>
                               <Label text="EMAIL">
                                  <font>
@@ -334,10 +334,37 @@
                   </Button>
                </children>
                <HBox.margin>
-                  <Insets right="20.0" />
+                  <Insets right="10.0" />
                </HBox.margin>
             </FlowPane>
          </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" layoutY="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT">
+         <children>
+            <FlowPane alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="84.0" prefWidth="139.0" rowValignment="TOP">
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteData" styleClass="icon">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/trash.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="deletar" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="62.0" promptText="ID" styleClass="input">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></TextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </FlowPane>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
       </HBox>
       <AnchorPane fx:id="add" disable="true" layoutY="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="802.0" prefWidth="446.0" style="-fx-background-color: black;" visible="false" AnchorPane.rightAnchor="1130.0">
          <children>
