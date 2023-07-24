@@ -203,7 +203,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="75.0" prefWidth="1124.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="1072.0" style="-fx-border-color: linear-gradient(from 0% 0% to 100% 0%, rgba(17,00,194,1) 0%, rgba(0,255,214,1) 100%); -fx-border-width: 0 0 1 0;" text="Alterar" textAlignment="CENTER" textFill="#001eff">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="1072.0" style="-fx-border-color: linear-gradient(from 0% 0% to 100% 0%, rgba(17,00,194,1) 0%, rgba(0,255,214,1) 100%); -fx-border-width: 0 0 1 0;" text="Alterar" textAlignment="CENTER" textFill="#001eff">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -283,7 +283,7 @@
                         </HBox>
                         <HBox alignment="CENTER" layoutX="727.0" layoutY="10.0">
                            <children>
-                              <Button mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="42.0" prefWidth="113.0" styleClass="botao" text="Enviar">
+                              <Button fx:id="alterar" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#updateData" prefHeight="42.0" prefWidth="113.0" styleClass="botao" text="Alterar">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font>
@@ -311,111 +311,6 @@
             </VBox>
          </children>
       </GridPane>
-      <AnchorPane fx:id="add" disable="true" layoutY="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="802.0" prefWidth="446.0" style="-fx-background-color: black;" visible="false" AnchorPane.rightAnchor="1130.0">
-         <children>
-            <ImageView fitHeight="185.0" fitWidth="184.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Image/user-group.png" />
-               </image>
-            </ImageView>
-            <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="81.0" layoutY="217.0" orientation="VERTICAL" prefWidth="200.0">
-               <children>
-                  <FlowPane id="validados" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
-                     <children>
-                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
-                           <children>
-                              <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Image/person.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Primeiro nome" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </TextField>
-                     </children>
-                     <FlowPane.margin>
-                        <Insets />
-                     </FlowPane.margin>
-                  </FlowPane>
-                  <FlowPane id="validados" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
-                     <children>
-                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
-                           <children>
-                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Image/user.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Último nome" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                     <FlowPane.margin>
-                        <Insets top="35.0" />
-                     </FlowPane.margin>
-                  </FlowPane>
-                  <FlowPane id="validados" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
-                     <children>
-                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
-                           <children>
-                              <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Image/email.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Email" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                     <FlowPane.margin>
-                        <Insets bottom="35.0" top="35.0" />
-                     </FlowPane.margin>
-                  </FlowPane>
-                  <FlowPane id="validados" layoutX="10.0" layoutY="259.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
-                     <children>
-                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
-                           <children>
-                              <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Image/lock.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </VBox>
-                        <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Senha" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                     <FlowPane.margin>
-                        <Insets />
-                     </FlowPane.margin>
-                  </FlowPane>
-               </children>
-            </FlowPane>
-            <Button fx:id="sendRegister" contentDisplay="CENTER" layoutX="151.0" layoutY="643.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="145.0" style="-fx-background-radius: 10;" styleClass="element" stylesheets="@style.css" text="Cadastrar" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
       <HBox alignment="CENTER_RIGHT" layoutX="951.0" prefHeight="62.0" prefWidth="177.0">
          <children>
             <FlowPane alignment="CENTER" columnHalignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="146.0">
@@ -444,5 +339,110 @@
             </FlowPane>
          </children>
       </HBox>
+      <AnchorPane fx:id="add" disable="true" layoutY="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="802.0" prefWidth="446.0" style="-fx-background-color: black;" visible="false" AnchorPane.rightAnchor="1130.0">
+         <children>
+            <ImageView fitHeight="185.0" fitWidth="184.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/user-group.png" />
+               </image>
+            </ImageView>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="81.0" layoutY="217.0" orientation="VERTICAL" prefWidth="200.0">
+               <children>
+                  <FlowPane id="validados" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/person.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <TextField fx:id="fistnome" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Primeiro nome" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <FlowPane.margin>
+                              <Insets />
+                           </FlowPane.margin>
+                        </TextField>
+                     </children>
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </FlowPane>
+                  <FlowPane id="validados" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
+                           <children>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/user.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <TextField fx:id="lastnome" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Último nome" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <FlowPane.margin>
+                        <Insets top="35.0" />
+                     </FlowPane.margin>
+                  </FlowPane>
+                  <FlowPane id="validados" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/email.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <TextField fx:id="Remail" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Email" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <FlowPane.margin>
+                        <Insets bottom="35.0" top="35.0" />
+                     </FlowPane.margin>
+                  </FlowPane>
+                  <FlowPane id="validados" layoutX="10.0" layoutY="259.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="48.0" style="-fx-background-radius: 10 0 0 10; -fx-background-color: #222;">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/lock.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <TextField fx:id="Rsenha" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="235.0" promptText="Senha" style="-fx-background-radius: 0 10 10 0;" styleClass="input" stylesheets="@style.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </FlowPane>
+               </children>
+            </FlowPane>
+            <Button fx:id="sendRegister" contentDisplay="CENTER" layoutX="151.0" layoutY="643.0" mnemonicParsing="false" onAction="#setData" prefHeight="48.0" prefWidth="145.0" style="-fx-background-radius: 10;" styleClass="element" stylesheets="@style.css" text="Cadastrar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

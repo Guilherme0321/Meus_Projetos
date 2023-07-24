@@ -59,6 +59,19 @@ public class Controller implements Initializable {
     @FXML
     private TextField Asenha;
 
+    @FXML
+    private TextField Remail;
+
+    @FXML
+    private TextField Rsenha;
+
+    @FXML
+    private TextField fistnome;
+
+    @FXML
+    private TextField lastnome;
+
+    private int IDdeAlterar;
     private int Aid = 0;
 
     public void chamar(ActionEvent actionEvent) {
@@ -97,31 +110,63 @@ public class Controller implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources){
+        carregarTabela();
+
+        tabela.setOnMouseClicked(event -> {
+            User usuario = tabela.getSelectionModel().getSelectedItem();
+            if(usuario != null){
+                IDdeAlterar = usuario.getId();
+                System.out.println(IDdeAlterar);
+                AfirstName.setText(usuario.getFirstName());
+                AlastName.setText(usuario.getLastName());
+                Aemail.setText(usuario.getEmail());
+                Asenha.setText(usuario.getSenha());
+            }else{
+                AfirstName.setText("Vazio");
+                AlastName.setText("Vazio");
+                Aemail.setText("Vazio");
+                Asenha.setText("Vazio");
+                IDdeAlterar = -1;
+            }
+        });
+    }
+
+    public void carregarTabela(){
         Tid.setCellValueFactory(new PropertyValueFactory<User, Integer>("id"));
         Tnome.setCellValueFactory(new PropertyValueFactory<User,String>("firstName"));
         Tlastname.setCellValueFactory(new PropertyValueFactory<User,String>("lastName"));
         Temail.setCellValueFactory(new PropertyValueFactory<User,String>("email"));
         Tsenha.setCellValueFactory(new PropertyValueFactory<User,String>("senha"));
-        LerSQL getData = new LerSQL();
-        ArrayList<User> data = getData.getData("jdbc:mysql://localhost:3306/dados","root","12345");
+        LerSQL getData = new LerSQL("jdbc:mysql://localhost:3306/dados","root","12345");
+        ArrayList<User> data = getData.getData();
         addColumnList(data);
-
-        tabela.setOnMouseClicked(event -> {
-            User usuario = tabela.getSelectionModel().getSelectedItem();
-            if(usuario != null){
-                Aid = usuario.getId();
-                System.out.println(Aid);
-                AfirstName.setText(usuario.getFirstName());
-                AlastName.setText(usuario.getLastName());
-                Aemail.setText(usuario.getEmail());
-                Asenha.setText(usuario.getSenha());
-            }
-        });
     }
-
     public void addColumnList(ArrayList<User> data){
         ObservableList<User> userslist = FXCollections.observableArrayList(data);
         tabela.setItems(userslist);
+    }
+    @FXML
+    protected void setData(){
+        String nome = fistnome.getText();
+        String sobrenome = lastnome.getText();
+        String email = Remail.getText();
+        String senha = Rsenha.getText();
+        if(!nome.isEmpty() && !sobrenome.isEmpty() && !email.isEmpty() && !senha.isEmpty()){
+            User newUser = new User(0,nome,sobrenome,email,senha);
+            LerSQL set = new LerSQL("jdbc:mysql://localhost:3306/dados","root","12345");
+            set.sendData(newUser);
+            carregarTabela();
+        }
+    }
+
+    @FXML
+    protected void updateData(){
+        if(IDdeAlterar != -1 && !Asenha.getText().isEmpty() && !Aemail.getText().isEmpty() && !AlastName.getText().isEmpty() && !AfirstName.getText().isEmpty()){
+            User updatedUser = new User(IDdeAlterar,AfirstName.getText(),AlastName.getText(),Aemail.getText(),Asenha.getText());
+            LerSQL update = new LerSQL("jdbc:mysql://localhost:3306/dados","root","12345");
+            update.uptade(updatedUser);
+            carregarTabela();
+        }
     }
 
 
