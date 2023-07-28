@@ -1,6 +1,42 @@
-# Getting Started with Create React App
+# Portfólio Pessoal em React (Em Desenvolvimento)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Portfolio Screenshot](public\Foto_Projeto_desktop.png)
+![Portfolio Screenshot](public\Foto_Projeto_responsivo.png)
+
+Este é o meu portfólio pessoal em desenvolvimento, criado com React, onde compartilharei informações sobre mim, meus projetos e habilidades técnicas.
+
+## Visão Geral
+
+Bem-vindo ao meu portfólio pessoal em desenvolvimento! Essa aplicação em React tem como objetivo mostrar algumas das minhas habilidades como desenvolvedor, bem como compartilhar informações sobre os projetos em que tenho trabalhado.
+
+Atualmente, o portfólio está em estágio inicial e contém apenas a página inicial. Estou trabalhando ativamente no desenvolvimento das próximas páginas e recursos para torná-lo completo e informativo.
+
+## Tecnologias Utilizadas
+
+- React
+- HTML
+- CSS
+- JavaScript
+
+## Próximos Passos
+
+O portfólio está em desenvolvimento ativo, e os próximos passos incluem:
+
+- Adicionar mais páginas para mostrar detalhes sobre projetos e habilidades.
+- Aprimorar o design e a experiência do usuário.
+- Incluir uma página de contato para que os visitantes possam entrar em contato facilmente.
+- Adicionar seção de projetos com detalhes e demonstrações.
+
+## Contribuindo
+
+Este é um projeto em constante evolução, e qualquer contribuição ou feedback será muito apreciado. Sinta-se à vontade para abrir problemas ou enviar solicitações pull.
+
+## Contato
+
+Se você quiser entrar em contato comigo, pode me encontrar em:
+
+- LinkedIn: [Guilherme Oliveira](https://www.linkedin.com/in/guilherme-oliveira-b79171275/)
+
 
 ## Available Scripts
 
@@ -39,32 +75,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
