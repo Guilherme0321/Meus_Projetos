@@ -89,7 +89,7 @@ public class Controller implements Initializable {
             slide.play();
 
             buttonActive = false;
-            add.setTranslateX(446);
+            add.setTranslateX(346);
             slide.setOnFinished((event)->{
                 add.setVisible(false);
                 add.setDisable(true);
@@ -103,7 +103,7 @@ public class Controller implements Initializable {
             slide.setDuration(Duration.seconds(0.2));
             slide.setNode(add);
 
-            slide.setToX(446);
+            slide.setToX(346);
             slide.play();
             buttonActive = true;
             add.setTranslateX(0);

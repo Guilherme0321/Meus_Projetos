@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="1128.0" style="-fx-background-color: #001;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lista.listagem.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="1128.0" style="-fx-background-color: #252525;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lista.listagem.Controller">
    <children>
       <GridPane layoutY="93.0" prefHeight="700.0" prefWidth="1128.0">
         <columnConstraints>
@@ -366,14 +366,14 @@
             <Insets right="10.0" />
          </padding>
       </HBox>
-      <AnchorPane fx:id="add" disable="true" layoutY="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="802.0" prefWidth="446.0" style="-fx-background-color: black;" visible="false" AnchorPane.rightAnchor="1130.0">
+      <AnchorPane fx:id="add" disable="true" layoutY="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="802.0" prefWidth="346.0" style="-fx-background-color: black;" visible="false" AnchorPane.rightAnchor="1128.0">
          <children>
-            <ImageView fitHeight="185.0" fitWidth="184.0" layoutX="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="185.0" fitWidth="184.0" layoutX="81.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Image/user-group.png" />
                </image>
             </ImageView>
-            <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="81.0" layoutY="217.0" orientation="VERTICAL" prefWidth="200.0">
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="33.0" layoutY="213.0" orientation="VERTICAL" prefWidth="200.0">
                <children>
                   <FlowPane id="validados" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="285.0">
                      <children>
@@ -464,7 +464,7 @@
                   </FlowPane>
                </children>
             </FlowPane>
-            <Button fx:id="sendRegister" contentDisplay="CENTER" layoutX="151.0" layoutY="643.0" mnemonicParsing="false" onAction="#setData" prefHeight="48.0" prefWidth="145.0" style="-fx-background-radius: 10;" styleClass="element" stylesheets="@style.css" text="Cadastrar" textFill="WHITE">
+            <Button fx:id="sendRegister" contentDisplay="CENTER" layoutX="101.0" layoutY="645.0" mnemonicParsing="false" onAction="#setData" prefHeight="48.0" prefWidth="145.0" style="-fx-background-radius: 10;" styleClass="element" stylesheets="@style.css" text="Cadastrar" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
