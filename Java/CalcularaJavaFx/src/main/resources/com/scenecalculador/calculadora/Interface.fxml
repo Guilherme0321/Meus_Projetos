@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="505.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scenecalculador.calculadora.InterfaceController">
+
+   <children>
+      <GridPane layoutX="100.0" layoutY="145.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="409.0" prefWidth="305.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="sete" accessibleText="7" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="7" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="oito" accessibleText="8" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="quatro" accessibleText="4" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="seis" accessibleText="6" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="nove" accessibleText="9" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="cinco" accessibleText="5" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="um" accessibleText="1" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="dois" accessibleText="2" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="tres" accessibleText="3" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="C" alignment="CENTER" mnemonicParsing="false" onAction="#eraseTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="C">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="dividir" accessibleText="/" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="diminuir" accessibleText="-" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="soma" accessibleText="+" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="igual" alignment="CENTER" mnemonicParsing="false" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="apagar" accessibleText="remove" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               </Button>
+            <Button fx:id="zero" accessibleText="0" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="sinal" accessibleText="-" alignment="CENTER" mnemonicParsing="false" onAction="#changeSinal" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="+/-" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="ponto" accessibleText="." alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="." GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="multiplicar" accessibleText="*" alignment="CENTER" mnemonicParsing="false" onAction="#setTela" onDragEntered="#hover" onDragExited="#notHoverButton" onMouseEntered="#hover" onMouseExited="#notHoverButton" onMousePressed="#clickButton" onMouseReleased="#notHoverButton" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;" text="x" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+         </children>
+      </GridPane>
+      <TextField fx:id="tela" accessibleText="sfgsdgdsgfsd" layoutX="60.0" layoutY="44.0" prefHeight="89.0" prefWidth="385.0" style="-fx-background-radius: 50; -fx-background-color: #333; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </TextField>
+   </children>
+</AnchorPane>
