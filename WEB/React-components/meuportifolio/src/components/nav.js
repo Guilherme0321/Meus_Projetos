@@ -2,6 +2,9 @@ import Menu from './Images/menu.svg'
 import Close from './Images/close.svg'
 function nav(){
 
+    const OpenPagina = (nome) => {
+        window.open(`http://localhost:3000?${nome}`,'_self');
+    }
     const mudar = () => {
         let menuRes = document.querySelector('.HideListM');
         if(menuRes.classList.contains('height')){
@@ -14,7 +17,7 @@ function nav(){
     return(
         <nav className="nav-bar">
             <ul CLass="lista">
-                <li className="listItem"><a href="#" className="textPrincipal">Portifolio</a></li>
+                <li className="listItem"><a href="#" onClick={() => {OpenPagina('')}} className="textPrincipal">Portifolio</a></li>
                 <input onChange={mudar} type="checkbox" className="checkbox" id="checkbox" />
                 <label htmlFor="checkbox" className="checkboxIcon">
                     <img src={Menu} width="40px" className="menu" alt="Menu" />
@@ -24,13 +27,13 @@ function nav(){
             <div className="HideListM" >
                 <ul className="listaN">
                     <li className="listItem"><a href="#" className="text">Sobre</a></li>
-                    <li className="listItem"><a href="#" className="text">Home</a></li>
+                    <li className="listItem"><a href="#" onClick={() => {OpenPagina('Projetos')}} className="text">Projetos</a></li>
                     <li className="listItem"><a href="#" className="text">Skills</a></li>
                 </ul>
             </div>
             <ul className="listaM">
                 <li className="listItem"><a href="#" className="text">Sobre</a></li>
-                <li className="listItem"><a href="#" className="text">Home</a></li>
+                <li className="listItem"><a href="#" onClick={() => {OpenPagina('Projetos')}} className="text">Projetos</a></li>
                 <li className="listItem"><a href="#" className="text">Skills</a></li>
             </ul>
         </nav>
