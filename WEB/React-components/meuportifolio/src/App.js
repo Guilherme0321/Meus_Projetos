@@ -17,10 +17,9 @@ function App() {
       }
       setTela(res)
       console.log();
-    }
-  )
+    },[])
 
-  if(Tela == "Projetos"){
+  if(String(Tela).includes("Projetos")){
     return(
       <>
         <Scene />
