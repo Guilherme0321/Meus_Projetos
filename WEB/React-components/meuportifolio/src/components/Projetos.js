@@ -1,15 +1,19 @@
 import Nav from './nav';
 import Data from './Projetos.json';
+import ProjectStructure from './projectsName';
 import './Projeto.css';
 import { useEffect, useState } from 'react';
 
 function Projetos() {
   const [projeto, setProjeto] = useState('');
+  const [projects, setProjects] = useState([]);
+
   useEffect(() => {
     const url = window.location.href;
     const res = url.includes('&') ? url.split('&')[1] : '';
     setProjeto(res);
-   
+    const array = Object.keys(Data.projetos);
+    setProjects(array);
   }, []);
 
   const openWindow = (nome) => {
@@ -28,7 +32,7 @@ function Projetos() {
                   <img className='imgProjetos' src={Data.projetos[projeto].info[key].image} alt='img'/>
                 </div>
                 <div className='infoProjeto'>
-                  <h1 className='nomeProjeto'>{key}</h1>
+                  <h1 className='nomeProjeto'>{key.toUpperCase()}</h1>
                 </div>
               </div>
             </div>
@@ -36,7 +40,16 @@ function Projetos() {
         </section>
       </>
     );
-  } else{
+  }
+  else if(projects.includes(projeto)){
+    return (
+      <>
+          <ProjectStructure chave={projeto}/>
+      </>
+    )
+  }
+  
+  else{
     return (
       <>
         <Nav />
