@@ -6,7 +6,7 @@ function ProjectStructure(props){
             <Nav />
             <section className='projects'>
                 {Object.values(Data.projetos[props.chave].info).map((key) => (
-                <div className='Project'>
+                <div key={key} className='Project'>
                     <div className='items'>
                     <div className='imagemProjeto'>
                         <img className='imgProjetos' src={key.image} alt='img'/>

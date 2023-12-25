@@ -16,7 +16,7 @@ function nav(){
 
     return(
         <nav className="nav-bar">
-            <ul CLass="lista">
+            <ul className="lista">
                 <li className="listItem"><a href="#" onClick={() => {OpenPagina('')}} className="textPrincipal">Portifolio</a></li>
                 <input onChange={mudar} type="checkbox" className="checkbox" id="checkbox" />
                 <label htmlFor="checkbox" className="checkboxIcon">

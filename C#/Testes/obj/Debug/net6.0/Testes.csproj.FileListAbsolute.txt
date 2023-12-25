@@ -1,0 +1,14 @@
+C:\Meu projetos\Meus_Projetos\C#\Testes\bin\Debug\net6.0\Testes.exe
+C:\Meu projetos\Meus_Projetos\C#\Testes\bin\Debug\net6.0\Testes.deps.json
+C:\Meu projetos\Meus_Projetos\C#\Testes\bin\Debug\net6.0\Testes.runtimeconfig.json
+C:\Meu projetos\Meus_Projetos\C#\Testes\bin\Debug\net6.0\Testes.dll
+C:\Meu projetos\Meus_Projetos\C#\Testes\bin\Debug\net6.0\Testes.pdb
+C:\Meu projetos\Meus_Projetos\C#\Testes\obj\Debug\net6.0\Testes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Meu projetos\Meus_Projetos\C#\Testes\obj\Debug\net6.0\Testes.AssemblyInfoInputs.cache
+C:\Meu projetos\Meus_Projetos\C#\Testes\obj\Debug\net6.0\Testes.AssemblyInfo.cs
+C:\Meu projetos\Meus_Projetos\C#\Testes\obj\Debug\net6.0\Testes.csproj.CoreCompileInputs.cache
+C:\Meu projetos\Meus_Projetos\C#\Testes\obj\Debug\net6.0\Testes.dll
+C:\Meu projetos\Meus_Projetos\C#\Testes\obj\Debug\net6.0\refint\Testes.dll
+C:\Meu projetos\Meus_Projetos\C#\Testes\obj\Debug\net6.0\Testes.pdb
+C:\Meu projetos\Meus_Projetos\C#\Testes\obj\Debug\net6.0\Testes.genruntimeconfig.cache
+C:\Meu projetos\Meus_Projetos\C#\Testes\obj\Debug\net6.0\ref\Testes.dll

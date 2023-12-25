@@ -55,7 +55,7 @@ function Projetos() {
         <Nav />
         <section className='projects'>
           {Object.keys(Data.projetos).map((chave) => (
-            <div className='Project' onClick={() => { openWindow(chave) }}>
+            <div key={chave} className='Project' onClick={() => { openWindow(chave) }}>
               <div className='items'>
                 <div className='imagemProjeto'>
                   <img className='imgProjetos' src={Data.projetos[chave].image} alt={chave} />
